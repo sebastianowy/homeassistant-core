@@ -222,8 +222,7 @@ class ManualAlarm(AlarmControlPanelEntity, RestoreEntity):
         self._attr_name = name
         self._attr_unique_id = unique_id
         if code_template:
-            self._code: str | Template | None = code_template
-            self._code.hass = hass
+            self._code = code_template
         else:
             self._code = code or None
         self._attr_code_arm_required = code_arm_required
