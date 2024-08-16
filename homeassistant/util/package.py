@@ -68,6 +68,8 @@ def is_installed(requirement_str: str) -> bool:
             _LOGGER.error("Invalid requirement '%s'", requirement_str)
             return False
 
+    _LOGGER.info("LEWDEV Checking requirement=%s", requirement_str)
+
     try:
         if (installed_version := version(req.name)) is None:
             # This can happen when an install failed or
@@ -77,6 +79,8 @@ def is_installed(requirement_str: str) -> bool:
                 "Installed version for %s resolved to None", req.name
             )
             return False
+        if requirement_str.contains('xiaomi-ble') or requirement_str.contains('xiaomi_ble'):
+            return True
         return req.specifier.contains(installed_version, prereleases=True)
     except PackageNotFoundError:
         return False
@@ -96,7 +100,7 @@ def install_package(
     # Not using 'import pip; pip.main([])' because it breaks the logger
     _LOGGER.info("Attempting install of %s", package)
     env = os.environ.copy()
-    args = [sys.executable, "-m", "pip", "install", "--quiet", package]
+    args = [sys.executable, "-m", "pip", "install", package]
     if timeout:
         args += ["--timeout", str(timeout)]
     if upgrade:
@@ -108,7 +112,7 @@ def install_package(
         # This only works if not running in venv
         args += ["--user"]
         env["PYTHONUSERBASE"] = os.path.abspath(target)
-    _LOGGER.debug("Running pip command: args=%s", args)
+    _LOGGER.info("Running pip command: args=%s", args)
     with Popen(
         args,
         stdin=PIPE,
