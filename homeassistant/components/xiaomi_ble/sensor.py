@@ -1,8 +1,8 @@
 """Support for xiaomi ble sensors."""
 from __future__ import annotations
 
-from xiaomi_ble import DeviceClass, SensorUpdate, Units
-from xiaomi_ble.parser import ExtendedSensorDeviceClass
+from .xiaomi_ble import DeviceClass, SensorUpdate, Units
+from .xiaomi_ble.parser import ExtendedSensorDeviceClass
 
 from homeassistant import config_entries
 from homeassistant.components.bluetooth.passive_update_processor import (

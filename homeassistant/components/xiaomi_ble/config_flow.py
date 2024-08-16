@@ -6,8 +6,8 @@ import dataclasses
 from typing import Any
 
 import voluptuous as vol
-from xiaomi_ble import XiaomiBluetoothDeviceData as DeviceData
-from xiaomi_ble.parser import EncryptionScheme
+from .xiaomi_ble import XiaomiBluetoothDeviceData as DeviceData
+from .xiaomi_ble.parser import EncryptionScheme
 
 from homeassistant.components import onboarding
 from homeassistant.components.bluetooth import (

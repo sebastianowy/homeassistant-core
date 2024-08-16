@@ -1,7 +1,7 @@
 """Support for Xiaomi binary sensors."""
 from __future__ import annotations
 
-from xiaomi_ble.parser import (
+from .xiaomi_ble.parser import (
     BinarySensorDeviceClass as XiaomiBinarySensorDeviceClass,
     ExtendedBinarySensorDeviceClass,
     SensorUpdate,

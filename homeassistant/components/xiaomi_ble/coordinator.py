@@ -3,7 +3,7 @@ from collections.abc import Callable, Coroutine
 from logging import Logger
 from typing import Any
 
-from xiaomi_ble import XiaomiBluetoothDeviceData
+from .xiaomi_ble import XiaomiBluetoothDeviceData
 
 from homeassistant.components.bluetooth import (
     BluetoothScanningMode,
