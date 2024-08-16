@@ -79,8 +79,11 @@ def is_installed(requirement_str: str) -> bool:
                 "Installed version for %s resolved to None", req.name
             )
             return False
-        if requirement_str.contains('xiaomi-ble') or requirement_str.contains('xiaomi_ble'):
+        resu = req.specifier.contains(installed_version, prereleases=True)
+        _LOGGER.info("LEWDEV Official result for requirement=%s result=%s", requirement_str, resu)
+        if resu:
             return True
+        return 'xiaomi' in requirement_str
         return req.specifier.contains(installed_version, prereleases=True)
     except PackageNotFoundError:
         return False
