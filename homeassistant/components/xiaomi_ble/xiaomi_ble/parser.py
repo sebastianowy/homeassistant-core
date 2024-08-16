@@ -1094,8 +1094,9 @@ def obj4a08(
 
 def obj4a0c(
     xobj: bytes, device: XiaomiBluetoothDeviceData, device_type: str
-) -> dict[str, Any]:
+) -> dict[str, Any]:        
     """Single press"""
+    _LOGGER.error(f"LEWHERE SINGLEPRESS xobj={xobj} device={device} device_type={device_type}")
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="press",
@@ -1108,6 +1109,7 @@ def obj4a0d(
     xobj: bytes, device: XiaomiBluetoothDeviceData, device_type: str
 ) -> dict[str, Any]:
     """Double press"""
+    _LOGGER.error(f"LEWHERE DOUBLEPRESS xobj={xobj} device={device} device_type={device_type}")
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="double_press",
@@ -1120,6 +1122,7 @@ def obj4a0e(
     xobj: bytes, device: XiaomiBluetoothDeviceData, device_type: str
 ) -> dict[str, Any]:
     """Long press"""
+    _LOGGER.error(f"LEWHERE LONGPRESS xobj={xobj} device={device} device_type={device_type}")
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="long_press",
@@ -1717,7 +1720,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
         # check that data contains object
         if frctrl_object_include == 0:
             # data does not contain Object
-            _LOGGER.error("Advertisement doesn't contain payload, adv: %s", data.hex())
+            _LOGGER.error("LEWHERE Advertisement doesn't contain payload, adv: %s", data.hex())
             return False
 
         self.pending = False
@@ -1745,6 +1748,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
             payload = data[i:]
 
         self.set_device_sw_version(firmware)
+        _LOGGER.error("LEWHERE Payload: %s", payload)
 
         if payload is not None:
             sinfo += ", Object data: " + payload.hex()
@@ -1776,6 +1780,9 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                     break
                 this_start = payload_start + 3
                 dobject = payload[this_start:next_start]
+                _LOGGER.error(
+                       f'LEWHERE dobject={dobject} obj_length={obj_length} obj_typecode={obj_typecode} hex(obj_typecode)={hex(obj_typecode)}'
+                    )
                 if (
                     dobject
                     and obj_length != 0
@@ -1783,6 +1790,10 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                     in ["0x4a0c", "0x4a0d", "0x4a0e", "0x4e0c", "0x4e0d", "0x4e0e"]
                 ):
                     resfunc = xiaomi_dataobject_dict.get(obj_typecode, None)
+                    _LOGGER.error(
+                        "LEWHERE resfunc=%s",
+                        resfunc,
+                    )
                     if resfunc:
                         self.unhandled.update(resfunc(dobject, self, device_type))
                     else:
@@ -1792,6 +1803,9 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                             data.hex(),
                         )
                 payload_start = next_start
+                _LOGGER.error(
+                       f'LEWHERE payload_length >= payload_start + 3 payload_length={payload_length} payload_start={payload_start}'
+                    )
 
         return True
 
