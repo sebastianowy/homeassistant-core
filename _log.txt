@@ -1,0 +1,84 @@
+ 2024-08-15 14:01:45.205 DEBUG (MainThread) [custom_components.companion_bt_proxy] JSON: [{'address': 'B0:E4:5C:92:9B:67', 'rssi': -81, 'tx_power': 127, 'timestamp': 1723723303907, 'service_data': {}, 'manufacturer_data': {'117': 'Ahg0oaBWc5o2AOl2wUV+RvPgv64=\n'}}, {'address': '70:28:45:5F:6D:5D', 'name': 'Oclean Bluetooth', 'rssi': -93, 'tx_power': 127, 'timestamp': 1723723304712, 'service_uuids': ['00001803-0000-1000-8000-00805f9b34fb', '00001802-0000-1000-8000-00805f9b34fb', '0000fef5-0000-1000-8000-00805f9b34fb'], 'service_data': {}, 'manufacturer_data': {'27997': 'X0UocA==\n'}}, {'address': '00:A0:50:A9:39:2E', 'name': 'HwZ_fb133d2a54002b242e', 'rssi': -88, 'tx_power': 127, 'timestamp': 1723723303850, 'service_data': {}, 'manufacturer_data': {}}, {'address': '54:EF:44:52:D2:B8', 'rssi': -64, 'tx_power': 127, 'timestamp': 1723723303096, 'service_data': {}, 'manufacturer_data': {}}, {'address': '4D:A2:6A:29:F3:D2', 'rssi': -53, 'tx_power': 127, 'timestamp': 1723723303914, 'service_data': {}, 'manufacturer_data': {'76': 'DA4AqjttkDt3QNJAIzwQURAGRB1DJ/NY\n'}}, {'address': '4D:87:1D:91:27:DA', 'rssi': -54, 'tx_power': 127, 'timestamp': 1723723303248, 'service_data': {}, 'manufacturer_data': {'76': 'CQgTncCoAQ0bWBYIAJsH14yes+0=\n'}}, {'address': '7F:A8:C3:32:14:74', 'rssi': -86, 'tx_power': 127, 'timestamp': 1723723300240, 'service_data': {}, 'manufacturer_data': {'76': 'DA4AqjttkDt3QNJAIzwQURAGRB1DJ/NY\n'}}, {'address': '0F:C7:4C:C8:9D:8E', 'rssi': -82, 'tx_power': 127, 'timestamp': 1723723304561, 'service_data': {}, 'manufacturer_data': {'6': 'AQ8gIp8ARPCo/urRRwzEXUS4JHiqFfkPD8XC\n'}}, {'address': '4B:BE:CE:76:1F:97', 'rssi': -51, 'tx_power': 127, 'timestamp': 1723723301736, 'service_data': {}, 'manufacturer_data': {'76': 'EAY3HjwoBTA=\n'}}, {'address': '5B:81:8A:00:0A:C3', 'rssi': -87, 'tx_power': 127, 'timestamp': 1723723301794, 'service_data': {}, 'manufacturer_data': {'76': 'EAULmFD7cA==\n'}}, {'address': '70:E8:D9:46:3A:B7', 'rssi': -97, 'tx_power': 127, 'timestamp': 1723723304657, 'service_data': {}, 'manufacturer_data': {'76': 'EAY5HoAskhI=\n'}}, {'address': '4D:EB:D0:E4:05:D9', 'rssi': -51, 'tx_power': 127, 'timestamp': 1723723300902, 'service_data': {}, 'manufacturer_data': {'76': 'EAUvmIjuPQ==\n'}}, {'address': 'F0:EA:48:BF:2F:1E', 'rssi': -101, 'tx_power': 127, 'timestamp': 1723723300987, 'service_data': {}, 'manufacturer_data': {'76': 'EgIAAA==\n'}}, {'address': 'CF:99:B6:72:D6:B6', 'rssi': -51, 'tx_power': 127, 'timestamp': 1723723301693, 'service_data': {}, 'manufacturer_data': {'76': 'EgIAAA==\n'}}, {'address': '64:F8:3F:C2:D4:AD', 'rssi': -99, 'tx_power': 127, 'timestamp': 1723723301740, 'service_data': {}, 'manufacturer_data': {'76': 'FggAICxHhhowvA==\n'}}, {'address': 'F8:56:47:0C:DA:FF', 'rssi': -55, 'tx_power': 127, 'timestamp': 1723723303175, 'service_data': {}, 'manufacturer_data': {'76': 'EgIAAg==\n'}}]
+2024-08-15 14:01:45.206 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': 'B0:E4:5C:92:9B:67', 'rssi': -81, 'tx_power': 127, 'timestamp': 1723723303907, 'service_data': {}, 'manufacturer_data': {'117': 'Ahg0oaBWc5o2AOl2wUV+RvPgv64=\n'}}, {}, {117: b'\x02\x184\xa1\xa0Vs\x9a6\x00\xe9v\xc1E~F\xf3\xe0\xbf\xae'}
+2024-08-15 14:01:45.207 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '70:28:45:5F:6D:5D', 'name': 'Oclean Bluetooth', 'rssi': -93, 'tx_power': 127, 'timestamp': 1723723304712, 'service_uuids': ['00001803-0000-1000-8000-00805f9b34fb', '00001802-0000-1000-8000-00805f9b34fb', '0000fef5-0000-1000-8000-00805f9b34fb'], 'service_data': {}, 'manufacturer_data': {'27997': 'X0UocA==\n'}}, {}, {27997: b'_E(p'}
+2024-08-15 14:01:45.208 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '00:A0:50:A9:39:2E', 'name': 'HwZ_fb133d2a54002b242e', 'rssi': -88, 'tx_power': 127, 'timestamp': 1723723303850, 'service_data': {}, 'manufacturer_data': {}}, {}, {}
+2024-08-15 14:01:45.209 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '54:EF:44:52:D2:B8', 'rssi': -64, 'tx_power': 127, 'timestamp': 1723723303096, 'service_data': {}, 'manufacturer_data': {}}, {}, {}
+2024-08-15 14:01:45.210 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '4D:A2:6A:29:F3:D2', 'rssi': -53, 'tx_power': 127, 'timestamp': 1723723303914, 'service_data': {}, 'manufacturer_data': {'76': 'DA4AqjttkDt3QNJAIzwQURAGRB1DJ/NY\n'}}, {}, {76: b"\x0c\x0e\x00\xaa;m\x90;w@\xd2@#<\x10Q\x10\x06D\x1dC'\xf3X"}
+2024-08-15 14:01:45.212 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '4D:87:1D:91:27:DA', 'rssi': -54, 'tx_power': 127, 'timestamp': 1723723303248, 'service_data': {}, 'manufacturer_data': {'76': 'CQgTncCoAQ0bWBYIAJsH14yes+0=\n'}}, {}, {76: b'\t\x08\x13\x9d\xc0\xa8\x01\r\x1bX\x16\x08\x00\x9b\x07\xd7\x8c\x9e\xb3\xed'}
+2024-08-15 14:01:45.213 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '7F:A8:C3:32:14:74', 'rssi': -86, 'tx_power': 127, 'timestamp': 1723723300240, 'service_data': {}, 'manufacturer_data': {'76': 'DA4AqjttkDt3QNJAIzwQURAGRB1DJ/NY\n'}}, {}, {76: b"\x0c\x0e\x00\xaa;m\x90;w@\xd2@#<\x10Q\x10\x06D\x1dC'\xf3X"}
+2024-08-15 14:01:45.215 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '0F:C7:4C:C8:9D:8E', 'rssi': -82, 'tx_power': 127, 'timestamp': 1723723304561, 'service_data': {}, 'manufacturer_data': {'6': 'AQ8gIp8ARPCo/urRRwzEXUS4JHiqFfkPD8XC\n'}}, {}, {6: b'\x01\x0f "\x9f\x00D\xf0\xa8\xfe\xea\xd1G\x0c\xc4]D\xb8$x\xaa\x15\xf9\x0f\x0f\xc5\xc2'}
+2024-08-15 14:01:45.216 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '4B:BE:CE:76:1F:97', 'rssi': -51, 'tx_power': 127, 'timestamp': 1723723301736, 'service_data': {}, 'manufacturer_data': {'76': 'EAY3HjwoBTA=\n'}}, {}, {76: b'\x10\x067\x1e<(\x050'}
+2024-08-15 14:01:45.217 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '5B:81:8A:00:0A:C3', 'rssi': -87, 'tx_power': 127, 'timestamp': 1723723301794, 'service_data': {}, 'manufacturer_data': {'76': 'EAULmFD7cA==\n'}}, {}, {76: b'\x10\x05\x0b\x98P\xfbp'}
+2024-08-15 14:01:45.218 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '70:E8:D9:46:3A:B7', 'rssi': -97, 'tx_power': 127, 'timestamp': 1723723304657, 'service_data': {}, 'manufacturer_data': {'76': 'EAY5HoAskhI=\n'}}, {}, {76: b'\x10\x069\x1e\x80,\x92\x12'}
+2024-08-15 14:01:45.220 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '4D:EB:D0:E4:05:D9', 'rssi': -51, 'tx_power': 127, 'timestamp': 1723723300902, 'service_data': {}, 'manufacturer_data': {'76': 'EAUvmIjuPQ==\n'}}, {}, {76: b'\x10\x05/\x98\x88\xee='}
+2024-08-15 14:01:45.221 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': 'F0:EA:48:BF:2F:1E', 'rssi': -101, 'tx_power': 127, 'timestamp': 1723723300987, 'service_data': {}, 'manufacturer_data': {'76': 'EgIAAA==\n'}}, {}, {76: b'\x12\x02\x00\x00'}
+2024-08-15 14:01:45.221 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': 'CF:99:B6:72:D6:B6', 'rssi': -51, 'tx_power': 127, 'timestamp': 1723723301693, 'service_data': {}, 'manufacturer_data': {'76': 'EgIAAA==\n'}}, {}, {76: b'\x12\x02\x00\x00'}
+2024-08-15 14:01:45.222 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': '64:F8:3F:C2:D4:AD', 'rssi': -99, 'tx_power': 127, 'timestamp': 1723723301740, 'service_data': {}, 'manufacturer_data': {'76': 'FggAICxHhhowvA==\n'}}, {}, {76: b'\x16\x08\x00 ,G\x86\x1a0\xbc'}
+2024-08-15 14:01:45.222 DEBUG (MainThread) [custom_components.companion_bt_proxy.scanner] async_process_json: {'address': 'F8:56:47:0C:DA:FF', 'rssi': -55, 'tx_power': 127, 'timestamp': 1723723303175, 'service_data': {}, 'manufacturer_data': {'76': 'EgIAAg==\n'}}, {}, {76: b'\x12\x02\x00\x02'}
+     
+
+2024-08-16 10:09:27.216 WARNING (MainThread) [custom_components.companion_bt_proxy] LEW item: {'address': 'A4:C1:38:48:E2:8A', 'name': '090615.remote.btsw1', 'rssi': -47, 'tx_power': 127, 'timestamp': 1723795749406, 'service_data': {'0000fe95-0000-1000-8000-00805f9b34fb': 'MFq7OACK4kg4waQI\n'}, 'manufacturer_data': {}}
+{'address': 'A4:C1:38:48:E2:8A', 'name': '090615.remote.btsw1', 'rssi': -47, 'tx_power': 127, 'timestamp': 1723795749406, 'service_data': {'0000fe95-0000-1000-8000-00805f9b34fb': 'MFq7OACK4kg4waQI\n'}, 'manufacturer_data': {}} -> {'0000fe95-0000-1000-8000-00805f9b34fb': b'0Z\xbb8\x00\x8a\xe2H8\xc1\xa4\x08'} -> {}
+2024-08-16 10:10:03.046 INFO (MainThread) [xiaomi_ble.parser] BLE ADV from UNKNOWN Xiaomi device: MAC: b'\xa4\xc18H\xe2\x8a', ADV: 305abb38008ae24838c1a408
+2024-08-16 10:10:17.495 INFO (MainThread) [xiaomi_ble.parser] BLE ADV from UNKNOWN Xiaomi device: MAC: b'\xa4\xc18H\xe2\x8a', ADV: 305abb38008ae24838c1a408
+2024-08-16 10:09:27.217 DEBUG (MainThread) [homeassistant.components.bluetooth.manager] a44 (cbb4f081e8fca9e90601d86f8ba1b6b1): A4:C1:38:48:E2:8A AdvertisementData(local_name='090615.remote.btsw1', service_data={'0000fe95-0000-1000-8000-00805f9b34fb': b'0Z\xbb8\x00\x8a\xe2H8\xc1\xa4\x08'}, tx_power=127, rssi=-47) match: {'xiaomi_ble'}
+
+2024-08-16 10:11:15.255 INFO (MainThread) [xiaomi_ble.parser] BLE ADV from UNKNOWN Xiaomi device: MAC: b'\xa4\xc18H\xe2\x8a', ADV: 305abb38008ae24838c1a408
+
+
+ {'address': 'A4:C1:38:48:E2:8A', 'name': '090615.remote.btsw1', 'rssi': -60, 'tx_power': 127, 'timestamp': 1723882639978, 'service_data': {'0000fe95-0000-1000-8000-00805f9b34fb': 'EFm7OBqK4kg4waQ=\n'}, 'manufacturer_data': {}}
+ {'address': 'A4:C1:38:48:E2:8A', 'name': '090615.remote.btsw1', 'rssi': -51, 'tx_power': 127, 'timestamp': 1723883010635, 'service_data': {'0000fe95-0000-1000-8000-00805f9b34fb': 'WFm7OByK4kg4waTVq/kAAAClrz+r\n'}
+ {'address': 'A4:C1:38:48:E2:8A', 'name': '090615.remote.btsw1', 'rssi': -36, 'tx_power': 127, 'timestamp': 1723883382740, 'service_data': {'0000fe95-0000-1000-8000-00805f9b34fb': 'WFm7OAyK4kg4waRyxcgCAAAUWCFm\n'}
+ {'address': 'A4:C1:38:48:E2:8A', 'name': '090615.remote.btsw1', 'rssi': -77, 'tx_power': 127, 'timestamp': 1723890458063, 'service_data': {'0000fe95-0000-1000-8000-00805f9b34fb': 'EFm7OBiK4kg4waQ=\n'}
+ {'address': 'A4:C1:38:48:E2:8A', 'name': '090615.remote.btsw1', 'rssi': -43, 'tx_power': 127, 'timestamp': 1724059183513, 'service_data': {'0000fe95-0000-1000-8000-00805f9b34fb': 'EFm7OB+K4kg4waQ=\n'}
+  ---------
+   NAME:     Roborock E4
+   ID:       361942767
+   MAC:      54:48:E6:84:F5:84
+   IP:       192.168.1.149
+   TOKEN:    a519f82e72b4bf94134f93c6e43d94d2
+   MODEL:    roborock.vacuum.a01
+   ---------
+   NAME:     Mi 360° 2K
+   ID:       452407068
+   MAC:      60:7E:A4:61:DB:B0
+   IP:       192.168.1.200
+   TOKEN:    75384d374a356134306b413739307534
+   MODEL:    chuangmi.camera.029a02
+   ---------
+   NAME:     Xiaomi Smart Home Hub 2
+   ID:       551452855
+   MAC:      54:EF:44:52:D2:B8
+   IP:       192.168.1.158
+   TOKEN:    6e4330767743454178356c61624d7633
+   MODEL:    lumi.gateway.mgl001
+   ---------
+   NAME:     Mi 360° 2K CN
+   ID:       712728413
+   MAC:      78:DF:72:08:20:98
+   IP:       192.168.1.202
+   TOKEN:    53686b7134663070675570327a774933
+   MODEL:    chuangmi.camera.029a02
+   ---------
+   NAME:     góra
+   ID:       98623360
+   MAC:      7C:49:EB:AC:CD:62
+   IP:       192.168.1.52
+   TOKEN:    2148402847ca50df8f341790c6aef025
+   MODEL:    yeelink.light.color2
+   ---------
+   NAME:     salon
+   ID:       99428035
+   MAC:      7C:49:EB:B9:14:A5
+   IP:       192.168.1.94
+   TOKEN:    bfe12e610bac89af9e46f0ba467c24ec
+   MODEL:    yeelink.light.color2
+   ---------
+   NAME:     PTX wireless switch(bluetooth version)
+   ID:       blt.3.1i21bf980k401
+   BLE KEY:  bf5bb66297922d40cd85dc01bffb4af1
+   MAC:      A4:C1:38:48:E2:8A
+   IP:       77.65.99.72
+   TOKEN:    7df4da197f60a8cf476052da
+   MODEL:    090615.remote.btsw1
+   ---------

@@ -1956,7 +1956,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
         self.bindkey_verified = True
         return decrypted_payload
 
-    def _decrypt_mibeacon_legacy(
+    def _decrypt_mibe§acon_legacy(
         self, data: bytes, i: int, xiaomi_mac: bytes
     ) -> bytes | None:
         """decrypt MiBeacon v2/v3 encrypted advertisements"""
