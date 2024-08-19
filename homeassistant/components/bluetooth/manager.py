@@ -8,7 +8,7 @@ import logging
 
 from bleak_retry_connector import BleakSlotManager
 from bluetooth_adapters import BluetoothAdapters
-from habluetooth import BaseHaRemoteScanner, BaseHaScanner, BluetoothManager
+from .habluetooth import BaseHaRemoteScanner, BaseHaScanner, BluetoothManager
 
 from homeassistant import config_entries
 from homeassistant.const import EVENT_HOMEASSISTANT_STOP, EVENT_LOGGING_CHANGED

@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import Final
 
-from habluetooth import (  # noqa: F401
+from .habluetooth import (  # noqa: F401
     CONNECTABLE_FALLBACK_MAXIMUM_STALE_ADVERTISEMENT_SECONDS,
     FALLBACK_MAXIMUM_STALE_ADVERTISEMENT_SECONDS,
     SCANNER_WATCHDOG_INTERVAL,

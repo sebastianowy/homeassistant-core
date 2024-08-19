@@ -23,7 +23,7 @@ from bluetooth_adapters import (
     get_adapters,
 )
 from bluetooth_data_tools import monotonic_time_coarse as MONOTONIC_TIME
-from habluetooth import (
+from .habluetooth import (
     BaseHaRemoteScanner,
     BaseHaScanner,
     BluetoothScannerDevice,

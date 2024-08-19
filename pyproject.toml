@@ -69,6 +69,8 @@ dependencies    = [
     "bluetooth-sensor-state-data>=1.6.0",
     "bleak-retry-connector>=2.13.0",
     "bluetooth-data-tools>=0.3.1",
+    bluetooth-adapters = ">=0.16.1",
+    bluetooth-auto-recovery = ">=1.2.3",
     "bleak>=0.19.5",
     "pycryptodomex>=3.19.1"
 ]
@@ -77,7 +79,8 @@ dependencies    = [
 docs = [
     "Sphinx^5.0",
     "sphinx-rtd-theme^1.0",
-    "myst-parser^0.18"
+    "myst-parser^0.18",
+    "sphinx-autobuild^2021.3.14"
 ]
 
 [project.urls]

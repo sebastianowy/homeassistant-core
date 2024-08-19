@@ -1096,7 +1096,7 @@ def obj4a0c(
     xobj: bytes, device: XiaomiBluetoothDeviceData, device_type: str
 ) -> dict[str, Any]:        
     """Single press"""
-    _LOGGER.error(f"LEWHERE SINGLEPRESS xobj={xobj} device={device} device_type={device_type}")
+    _LOGGER.error(f"LEWDEV SINGLEPRESS xobj={xobj} device={device} device_type={device_type}")
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="press",
@@ -1109,7 +1109,7 @@ def obj4a0d(
     xobj: bytes, device: XiaomiBluetoothDeviceData, device_type: str
 ) -> dict[str, Any]:
     """Double press"""
-    _LOGGER.error(f"LEWHERE DOUBLEPRESS xobj={xobj} device={device} device_type={device_type}")
+    _LOGGER.error(f"LEWDEV DOUBLEPRESS xobj={xobj} device={device} device_type={device_type}")
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="double_press",
@@ -1122,7 +1122,7 @@ def obj4a0e(
     xobj: bytes, device: XiaomiBluetoothDeviceData, device_type: str
 ) -> dict[str, Any]:
     """Long press"""
-    _LOGGER.error(f"LEWHERE LONGPRESS xobj={xobj} device={device} device_type={device_type}")
+    _LOGGER.error(f"LEWDEV LONGPRESS xobj={xobj} device={device} device_type={device_type}")
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="long_press",
@@ -1588,7 +1588,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
         """Parser for Xiaomi sensors"""
         # check for adstruc length
         _LOGGER.error(
-            f"LEWHERE BLE ADV service info {service_info} name {name} data {data}",
+            f"LEWDEV BLE ADV service info {service_info} name {name} data {data}",
         )
         i = 5  # till Frame Counter
         msg_length = len(data)
@@ -1649,7 +1649,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
         # determine the device type
         device_id = data[2] + (data[3] << 8)
         _LOGGER.error(
-            f"LEWHERE BLE ADV from {device_id} Xiaomi device: MAC: {source_mac}, ADV: {data.hex()}, data2: {data[2]}, data3: {data[3]}, data3moved: {(data[3] << 8)}",
+            f"LEWDEV BLE ADV from {device_id} Xiaomi device: MAC: {source_mac}, ADV: {data.hex()}, data2: {data[2]}, data3: {data[3]}, data3moved: {(data[3] << 8)}",
         )
         try:
             device = DEVICE_TYPES[device_id]
@@ -1720,7 +1720,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
         # check that data contains object
         if frctrl_object_include == 0:
             # data does not contain Object
-            _LOGGER.error("LEWHERE Advertisement doesn't contain payload, adv: %s", data.hex())
+            _LOGGER.error("LEWDEV Advertisement doesn't contain payload, adv: %s", data.hex())
             return False
 
         self.pending = False
@@ -1748,7 +1748,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
             payload = data[i:]
 
         self.set_device_sw_version(firmware)
-        _LOGGER.error("LEWHERE Payload: %s", payload)
+        _LOGGER.error("LEWDEV Payload: %s", payload)
 
         if payload is not None:
             sinfo += ", Object data: " + payload.hex()
@@ -1781,7 +1781,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                 this_start = payload_start + 3
                 dobject = payload[this_start:next_start]
                 _LOGGER.error(
-                       f'LEWHERE dobject={dobject} obj_length={obj_length} obj_typecode={obj_typecode} hex(obj_typecode)={hex(obj_typecode)}'
+                       f'LEWDEV dobject={dobject} obj_length={obj_length} obj_typecode={obj_typecode} hex(obj_typecode)={hex(obj_typecode)}'
                     )
                 if (
                     dobject
@@ -1791,7 +1791,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                 ):
                     resfunc = xiaomi_dataobject_dict.get(obj_typecode, None)
                     _LOGGER.error(
-                        "LEWHERE resfunc=%s",
+                        "LEWDEV resfunc=%s",
                         resfunc,
                     )
                     if resfunc:
@@ -1804,7 +1804,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                         )
                 payload_start = next_start
                 _LOGGER.error(
-                       f'LEWHERE payload_length >= payload_start + 3 payload_length={payload_length} payload_start={payload_start}'
+                       f'LEWDEV payload_length >= payload_start + 3 payload_length={payload_length} payload_start={payload_start}'
                     )
 
         return True

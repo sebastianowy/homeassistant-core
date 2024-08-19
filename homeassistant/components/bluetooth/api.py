@@ -9,7 +9,7 @@ from asyncio import Future
 from collections.abc import Callable, Iterable
 from typing import TYPE_CHECKING, cast
 
-from habluetooth import (
+from .habluetooth import (
     BaseHaScanner,
     BluetoothScannerDevice,
     BluetoothScanningMode,

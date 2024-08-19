@@ -7,7 +7,7 @@ from functools import cache
 import logging
 from typing import TYPE_CHECKING, Any, Generic, TypedDict, TypeVar, cast
 
-from habluetooth import BluetoothScanningMode
+from .habluetooth import BluetoothScanningMode
 
 from homeassistant import config_entries
 from homeassistant.const import (

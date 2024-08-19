@@ -4,7 +4,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 import logging
 
-from habluetooth import BluetoothScanningMode
+from .habluetooth import BluetoothScanningMode
 
 from homeassistant.core import CALLBACK_TYPE, HomeAssistant, callback
 
