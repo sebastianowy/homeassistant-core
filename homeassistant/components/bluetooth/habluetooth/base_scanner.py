@@ -219,6 +219,7 @@ class BaseHaRemoteScanner(BaseHaScanner):
         self._expire_seconds = CONNECTABLE_FALLBACK_MAXIMUM_STALE_ADVERTISEMENT_SECONDS
         self._cancel_track: asyncio.TimerHandle | None = None
         self._previous_service_info: dict[str, BluetoothServiceInfoBleak] = {}
+        self._multiple_service_info: dict[str, List[BluetoothServiceInfoBleak]] = {}
 
     def restore_discovered_devices(
         self, history: DiscoveredDeviceAdvertisementData
@@ -373,7 +374,8 @@ class BaseHaRemoteScanner(BaseHaScanner):
         self._last_detection = advertisement_monotonic_time
         prev_service_info = self._previous_service_info.get(address)
         if is_ptx:
-            _LOGGER.error(f"LEWDEV PTX _async_on_advertisement prev_service_info={prev_service_info}, service_data={service_data}")
+            True
+#             _LOGGER.error(f"LEWDEV PTX _async_on_advertisement prev_service_info={prev_service_info}, service_data={service_data}")
         if prev_service_info is None:
             # We expect this is the rare case and since py3.11+ has
             # near zero cost try on success, and we can avoid .get()
@@ -444,7 +446,8 @@ class BaseHaRemoteScanner(BaseHaScanner):
             tx_power,
         )
         if is_ptx:
-            _LOGGER.error(f"LEWDEV PTX _async_on_advertisement service_info={service_info}")
+            True
+#             _LOGGER.error(f"LEWDEV PTX _async_on_advertisement service_info={service_info}")
         self._previous_service_info[address] = service_info
         self._manager.scanner_adv_received(service_info)
 
