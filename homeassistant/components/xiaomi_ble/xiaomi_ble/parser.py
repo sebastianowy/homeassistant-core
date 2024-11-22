@@ -1098,12 +1098,13 @@ def obj4a0c(
 ) -> dict[str, Any]:        
     """Single press"""
     _LOGGER.error(f"#LEWDEV SINGLEPRESS xobj={xobj} device={device} device_type={device_type}")
+    deviceCopy = deepcopy(device)
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="press",
         event_properties=None,
     )
-    deepcopy(device).fire_event(
+    deviceCopy.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="reset",
         event_properties=None,
@@ -1116,12 +1117,13 @@ def obj4a0d(
 ) -> dict[str, Any]:
     """Double press"""
     _LOGGER.error(f"#LEWDEV DOUBLEPRESS xobj={xobj} device={device} device_type={device_type}")
+    deviceCopy = deepcopy(device)
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="double_press",
         event_properties=None,
     )
-    deepcopy(device).fire_event(
+    deviceCopy.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="reset",
         event_properties=None,
@@ -1134,12 +1136,13 @@ def obj4a0e(
 ) -> dict[str, Any]:
     """Long press"""
     _LOGGER.error(f"#LEWDEV LONGPRESS xobj={xobj} device={device} device_type={device_type}")
+    deviceCopy = deepcopy(device)
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="long_press",
         event_properties=None,
     )
-    deepcopy(device).fire_event(
+    deviceCopy.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="reset",
         event_properties=None,
