@@ -1611,7 +1611,7 @@ class XiaomiBluetoothDeviceData(BluetoothData):
             _LOGGER.warning("Invalid data length (initial check), adv: %s", data.hex())
             return False
 
-        mac_readable = service_info.address
+        mac_readable = "" + service_info.address
         source_mac = bytes.fromhex(mac_readable.replace(":", ""))
 
         # extract frame control bits
