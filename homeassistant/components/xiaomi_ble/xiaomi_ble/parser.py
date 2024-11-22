@@ -1102,6 +1102,11 @@ def obj4a0c(
         event_type="press",
         event_properties=None,
     )
+    device.fire_event(
+        key=EventDeviceKeys.BUTTON,
+        event_type="reset",
+        event_properties=None,
+    )
     return {}
 
 
@@ -1115,6 +1120,11 @@ def obj4a0d(
         event_type="double_press",
         event_properties=None,
     )
+    device.fire_event(
+        key=EventDeviceKeys.BUTTON,
+        event_type="reset",
+        event_properties=None,
+    )
     return {}
 
 
@@ -1126,6 +1136,11 @@ def obj4a0e(
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="long_press",
+        event_properties=None,
+    )
+    device.fire_event(
+        key=EventDeviceKeys.BUTTON,
+        event_type="reset",
         event_properties=None,
     )
     return {}
@@ -1788,12 +1803,6 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                     resfunc = xiaomi_dataobject_dict.get(obj_typecode, None)
                     if resfunc:
                         self.unhandled.update(resfunc(dobject, self, device_type))
-                        if is_ptx:
-                            device.fire_event(
-                                key=EventDeviceKeys.BUTTON,
-                                event_type="reset",
-                                event_properties=None,
-                            )
                     else:
                         _LOGGER.info(
                             "%s, UNKNOWN dataobject in payload! Adv: %s",
