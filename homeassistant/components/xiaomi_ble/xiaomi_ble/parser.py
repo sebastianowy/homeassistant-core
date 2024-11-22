@@ -1721,9 +1721,6 @@ class XiaomiBluetoothDeviceData(BluetoothData):
         # check that data contains object
         if frctrl_object_include == 0:
             # data does not contain Object
-
-            if is_ptx:
-                _LOGGER.error("#LEWDEV [_parse_xiaomi] No payload: %s", data.hex())
             return False
 
         self.pending = False
@@ -1751,7 +1748,6 @@ class XiaomiBluetoothDeviceData(BluetoothData):
             payload = data[i:]
 
         self.set_device_sw_version(firmware)
-#         _LOGGER.error("LEWDEV Payload: %s", payload)
 
         if payload is not None:
             sinfo += ", Object data: " + payload.hex()
@@ -1783,9 +1779,6 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                     break
                 this_start = payload_start + 3
                 dobject = payload[this_start:next_start]
-#                 _LOGGER.error(
-#                        f'LEWDEV dobject={dobject} obj_length={obj_length} obj_typecode={obj_typecode} hex(obj_typecode)={hex(obj_typecode)}'
-#                     )
                 if (
                     dobject
                     and obj_length != 0
@@ -1793,12 +1786,14 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                     in ["0x4a0c", "0x4a0d", "0x4a0e", "0x4e0c", "0x4e0d", "0x4e0e"]
                 ):
                     resfunc = xiaomi_dataobject_dict.get(obj_typecode, None)
-#                     _LOGGER.error(
-#                         "LEWDEV resfunc=%s",
-#                         resfunc,
-#                     )
                     if resfunc:
                         self.unhandled.update(resfunc(dobject, self, device_type))
+                        if is_ptx:
+                            device.fire_event(
+                                key=EventDeviceKeys.BUTTON,
+                                event_type="reset",
+                                event_properties=None,
+                            )
                     else:
                         _LOGGER.info(
                             "%s, UNKNOWN dataobject in payload! Adv: %s",
@@ -1806,9 +1801,6 @@ class XiaomiBluetoothDeviceData(BluetoothData):
                             data.hex(),
                         )
                 payload_start = next_start
-#                 _LOGGER.error(
-#                        f'LEWDEV payload_length >= payload_start + 3 payload_length={payload_length} payload_start={payload_start}'
-#                     )
 
         return True
 
