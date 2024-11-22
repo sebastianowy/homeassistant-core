@@ -42,6 +42,7 @@ from .const import (
 from .devices import DEVICE_TYPES, SLEEPY_DEVICE_MODELS
 from .events import EventDeviceKeys
 from .locks import BLE_LOCK_ACTION, BLE_LOCK_ERROR, BLE_LOCK_METHOD
+from copy import deepcopy
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -1102,7 +1103,7 @@ def obj4a0c(
         event_type="press",
         event_properties=None,
     )
-    device.deepcopy().fire_event(
+    deepcopy(device).fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="reset",
         event_properties=None,
@@ -1120,7 +1121,7 @@ def obj4a0d(
         event_type="double_press",
         event_properties=None,
     )
-    device.deepcopy().fire_event(
+    deepcopy(device).fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="reset",
         event_properties=None,
@@ -1138,7 +1139,7 @@ def obj4a0e(
         event_type="long_press",
         event_properties=None,
     )
-    device.deepcopy().fire_event(
+    deepcopy(device).fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="reset",
         event_properties=None,
