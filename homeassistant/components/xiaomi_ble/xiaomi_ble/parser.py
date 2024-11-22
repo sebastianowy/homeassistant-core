@@ -1102,7 +1102,7 @@ def obj4a0c(
         event_type="press",
         event_properties=None,
     )
-    device.fire_event(
+    device.deepcopy().fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="reset",
         event_properties=None,
@@ -1120,7 +1120,7 @@ def obj4a0d(
         event_type="double_press",
         event_properties=None,
     )
-    device.fire_event(
+    device.deepcopy().fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="reset",
         event_properties=None,
@@ -1138,7 +1138,7 @@ def obj4a0e(
         event_type="long_press",
         event_properties=None,
     )
-    device.fire_event(
+    device.deepcopy().fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="reset",
         event_properties=None,
