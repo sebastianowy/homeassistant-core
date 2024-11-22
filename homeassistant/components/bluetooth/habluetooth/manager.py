@@ -530,7 +530,7 @@ class BluetoothManager:
             tracker.async_collect(service_info)
 
         target_key = "0000fe95-0000-1000-8000-00805f9b34fb"
-        is_ptx = target_key in service_data
+        is_ptx = target_key in service_info.service_data
         # If the advertisement data is the same as the last time we saw it, we
         # don't need to do anything else unless its connectable and we are missing
         # connectable history for the device so we can make it available again
