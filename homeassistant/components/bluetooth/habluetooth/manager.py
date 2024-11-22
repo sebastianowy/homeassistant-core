@@ -529,6 +529,8 @@ class BluetoothManager:
         if address not in tracker.intervals:
             tracker.async_collect(service_info)
 
+        target_key = "0000fe95-0000-1000-8000-00805f9b34fb"
+        is_ptx = target_key in service_data
         # If the advertisement data is the same as the last time we saw it, we
         # don't need to do anything else unless its connectable and we are missing
         # connectable history for the device so we can make it available again
@@ -544,6 +546,7 @@ class BluetoothManager:
                 or service_info.service_uuids != old_service_info.service_uuids
                 or service_info.name != old_service_info.name
             )
+            and not is_ptx
         ):
             return
 

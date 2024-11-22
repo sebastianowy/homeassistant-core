@@ -370,12 +370,10 @@ class BaseHaRemoteScanner(BaseHaScanner):
 
         target_key = "0000fe95-0000-1000-8000-00805f9b34fb"
         is_ptx = target_key in service_data
+
         self.scanning = not self._connecting
         self._last_detection = advertisement_monotonic_time
         prev_service_info = self._previous_service_info.get(address)
-        if is_ptx:
-            True
-#             _LOGGER.error(f"LEWDEV PTX _async_on_advertisement prev_service_info={prev_service_info}, service_data={service_data}")
         if prev_service_info is None:
             # We expect this is the rare case and since py3.11+ has
             # near zero cost try on success, and we can avoid .get()
@@ -445,9 +443,6 @@ class BaseHaRemoteScanner(BaseHaScanner):
             advertisement_monotonic_time,
             tx_power,
         )
-        if is_ptx:
-            True
-#             _LOGGER.error(f"LEWDEV PTX _async_on_advertisement service_info={service_info}")
         self._previous_service_info[address] = service_info
         self._manager.scanner_adv_received(service_info)
 
