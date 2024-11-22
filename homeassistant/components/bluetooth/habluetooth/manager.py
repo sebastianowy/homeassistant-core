@@ -546,7 +546,6 @@ class BluetoothManager:
                 or service_info.service_uuids != old_service_info.service_uuids
                 or service_info.name != old_service_info.name
             )
-            and not is_ptx
         ):
             return
 

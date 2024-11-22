@@ -42,7 +42,6 @@ from .const import (
 from .devices import DEVICE_TYPES, SLEEPY_DEVICE_MODELS
 from .events import EventDeviceKeys
 from .locks import BLE_LOCK_ACTION, BLE_LOCK_ERROR, BLE_LOCK_METHOD
-from copy import deepcopy
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -1098,15 +1097,9 @@ def obj4a0c(
 ) -> dict[str, Any]:        
     """Single press"""
     _LOGGER.error(f"#LEWDEV SINGLEPRESS xobj={xobj} device={device} device_type={device_type}")
-    deviceCopy = deepcopy(device)
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="press",
-        event_properties=None,
-    )
-    deviceCopy.fire_event(
-        key=EventDeviceKeys.BUTTON,
-        event_type="reset",
         event_properties=None,
     )
     return {}
@@ -1117,15 +1110,9 @@ def obj4a0d(
 ) -> dict[str, Any]:
     """Double press"""
     _LOGGER.error(f"#LEWDEV DOUBLEPRESS xobj={xobj} device={device} device_type={device_type}")
-    deviceCopy = deepcopy(device)
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="double_press",
-        event_properties=None,
-    )
-    deviceCopy.fire_event(
-        key=EventDeviceKeys.BUTTON,
-        event_type="reset",
         event_properties=None,
     )
     return {}
@@ -1136,15 +1123,9 @@ def obj4a0e(
 ) -> dict[str, Any]:
     """Long press"""
     _LOGGER.error(f"#LEWDEV LONGPRESS xobj={xobj} device={device} device_type={device_type}")
-    deviceCopy = deepcopy(device)
     device.fire_event(
         key=EventDeviceKeys.BUTTON,
         event_type="long_press",
-        event_properties=None,
-    )
-    deviceCopy.fire_event(
-        key=EventDeviceKeys.BUTTON,
-        event_type="reset",
         event_properties=None,
     )
     return {}
